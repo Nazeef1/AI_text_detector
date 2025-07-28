@@ -1,0 +1,8 @@
+streamlit
+spacy
+scikit-learn
+textstat
+matplotlib
+numpy
+joblib
+scipy
