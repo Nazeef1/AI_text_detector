@@ -6,8 +6,12 @@ import spacy
 from scipy.sparse import hstack, csr_matrix
 from sklearn.feature_extraction.text import TfidfVectorizer
 from textstat import flesch_reading_ease
+import spacy.cli
+
 
 # Load spaCy and saved models
+spacy.cli.download("en_core_web_sm")
+
 nlp = spacy.load("en_core_web_sm")
 model = joblib.load("hc3_model.pkl")
 tfidf = joblib.load("hc3_tfidf_vectorizer.pkl")
