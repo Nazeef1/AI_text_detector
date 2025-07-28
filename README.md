@@ -51,7 +51,6 @@ Originally trained on the [AI\_Human.csv](https://www.kaggle.com/datasets/). Now
 
 * **Prediction:** 🤖 AI-generated
 * **Confidence:** AI = `0.93`, Human = `0.07`
-* **POS Ratios:** Noun = `0.32`, Verb = `0.18`, Pronoun = `0.04`
 
 ---
 
