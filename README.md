@@ -55,6 +55,14 @@ Originally trained on the [AI\_Human.csv](https://www.kaggle.com/datasets/). Now
 
 ---
 
+
+## 🔴 Demo
+
+[![Watch the demo](https://img.youtube.com/vi/vd-dV26n7d0/hqdefault.jpg)](https://www.youtube.com/watch?v=vd-dV26n7d0)
+
+
+---
+
 ## 📜 License
 
 MIT License. Free to use and modify.
