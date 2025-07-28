@@ -1,4 +1,3 @@
-# streamlit_app.py
 import streamlit as st
 import joblib
 import numpy as np
@@ -8,15 +7,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from textstat import flesch_reading_ease
 import spacy.cli
 
-
-# Load spaCy and saved models
 spacy.cli.download("en_core_web_sm")
 
 nlp = spacy.load("en_core_web_sm")
 model = joblib.load("hc3_model.pkl")
 tfidf = joblib.load("hc3_tfidf_vectorizer.pkl")
 
-# POS feature extraction
 def extract_pos_stats(doc):
     pos_counts = doc.count_by(spacy.attrs.POS)
     total = sum(pos_counts.values())
@@ -29,7 +25,6 @@ def extract_pos_stats(doc):
         "num_ratio": pos_counts.get(93, 0) / total if total > 0 else 0
     }
 
-# Prediction function
 def predict_ai_text(text):
     doc = nlp(text)
     pos = extract_pos_stats(doc)
@@ -49,7 +44,7 @@ def predict_ai_text(text):
     prediction = model.predict(final_feat)[0]
     return prediction, pred_proba
 
-# Streamlit UI
+
 st.set_page_config(page_title="AI Text Detector", layout="centered")
 st.title("🧠 AI Text Detector")
 st.write("Enter any text below to find out if it's **AI-generated** or **Human-written**.")
